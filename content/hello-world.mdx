@@ -5,82 +5,12 @@ summary: "A brief introduction to the website, and saying hello to the world!"
 tags: "web dev, a slice of life"
 ---
 
-Nextfolio includes all the essentials for a stunning portfolio website.
+# Hello, world!
 
-Start by [deploying](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio) your portfolio with Vercel in minutes, or fork the [repository](https://github.com/1msirius/Nextfolio) and follow the instructions below to set it up.
+Hi. It’s been a while since I’ve talked to the vast Internet. I have done a huge renewal to my personal website, including changes such as employing a new framework, following the most recent trend, putting a new profile picture (although the picture itself is back when I was in high school!), and adding a project tab, which would include some big projects that I have done in the past (I’ll add more to this later on). I’m very excited to share my interests and projects that I have done so far, and I will keep on sharing the most recent news in several areas in the CS area. 
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio)
+But first, let’s talk about some updates that I have done to this brand new website. My old website was a simple HTML + CSS + JS website that utilized a template that I bought for probably $20, and I changed some content according to my taste and hosted the files on Github Pages, which did not take me long to set it up. I bought the domain for about $10 on NameCheap (which is an awesome place selling domain names, so definitely check them out), and set up my very first website. This was when I was back in high school, so probably 5 years or so before. I have done a massive research on web development and its related areas, and I figured out that the old website has a lot of room for improvement for the last five years. I knew that I should have made some changes to make the website look better, but I was too lazy and did not care more about it. But finally, I’m here! I have made some changes that improve not only the website’s design but also its mechanical features.
 
-## Installation
+The biggest change that I made is that I changed the website’s simple HTML + CSS + JS structure into using a fancy framework, and it’s no other than Next.js. React is the most renowned front-end library in the industry, and Vercel did an amazing job creating a convenient and visually appealing framework out of it. I get some people’s hatred against those big-tech frameworks, but honestly, for creating a simple website like this, frameworks are so useful with their tools and necessities already brought to use. Because of the character of the website, I was considering using Django at first, but it became too much of a hassle trying to use Python in a web development area. I just can’t get over it. Javascript (or Typescript) makes so much more sense around here.  
 
-Nextfolio uses [pnpm](https://pnpm.io/installation) for dependency management, so ensure it is installed on your system.
-
-Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```
-pnpm create next-app --example https://github.com/1msirius/Nextfolio my-portfolio
-```
-
-Start the development server:
-
-```
-pnpm dev
-```
-
-The server will be running at [http://localhost:3000](http://localhost:3000).
-
-## Configuration
-
-Customize your Nextfolio setup by updating your information to ensure proper SEO, feed generation, Open Graph integration, and other settings.
-
-### Config.ts
-
-Update the site metadata and social links in the **app/config.ts** file. These constants are utilized across the site for SEO, feeds, social links, and Open Graph integration.
-
-```
-export const metaData = {
-  baseUrl: "https://nextfolio-template.vercel.app", // Update with your site base URL
-  title: "Nextfolio", // Update with your site title
-  name: "Sirius", // Update with your name
-  ogImage: "/opengraph-image.png", // Update with your Open Graph image
-  description:
-    "A clean, fast, and lightweight portfolio template built with Next.js, Vercel, and Tailwind CSS for optimal performance.", // Update with your site description
-};
-
-export const socialLinks = {
-  twitter: "https://x.com/1tssirius", // Update with your Twitter URL
-  github: "https://github.com/1msirius/Nextfolio", // Update with your GitHub URL
-  instagram: "https://www.instagram.com/", // Update with your Instagram URL
-  linkedin: "https://www.linkedin.com/", // Update with your LinkedIn URL
-  email: "mailto:example@gmail.com", // Update with your email address
-};
-```
-
-### Sitemap
-
-Adjust the routes to match your portfolio’s navigation in **app/sitemap.ts** file for SEO optimization:
-
-```
-let routes = ["", "blog", "projects", "photos"].map((route) => ({ // Update routes according to your navbar
-  url: `${BaseUrl}${route}`,
-  lastModified: new Date().toISOString().split("T")[0],
-}));
-```
-
-### Profile Photo
-
-Update your profile photo by replacing the **public/profile.png** file with your image.
-
-### Favicon
-
-Update your favicon by replacing the **public/favicon.ico** file with your custom icon.
-
-## Analytics
-
-Nextfolio uses [Vercel Web Analytics](https://vercel.com/docs/analytics/quickstart) and [Speed Insights](https://vercel.com/docs/speed-insights/quickstart) to monitor user interactions and website's performance. Simply deploy your site on Vercel and enable both features through the Vercel dashboard.
-
-## Ready!
-
-You're all set! Update your blog posts in the **/content** folder, add your project data in **app/project/projectdata.tsx**, and update your images in **app/photos/page.tsx**.
-
-Your portfolio is equipped with SEO, [RSS](/rss.xml), [Atom](/atom.xml), and [JSON](/feed.json) feeds, as well as analytics. Nextfolio is fully customizable, allowing you to add features as needed.
+I might make some more updates to the website to my taste, and the first thing I would do is to self-host the files. I’m currently using Vercel’s hosting services since they have the highest compatibility to Next.js framework. However, if I were to use a different framework or a library, I would perhaps self-host the files since I just don’t like putting my personal data to some company’s cloud (this has made me avoid big-tech cloud services, like AWS). I’m currently leaning towards using Ruby on Rails, which I heard has great compatibility with self-hosting a website using their framework. There is a learning curve because I have no knowledge about Ruby, the language, so I should invest some time in it. Scaling would also be an issue when I self-host my website, so I would have to come up with a solution for that problem as well.
