@@ -11,6 +11,6 @@ export const projects: Project[] = [
     year: 2019,
     description:
       "A software-focused project of a system that differentiates images of a person drowning and swimming for maritime safety.",
-    url: "https://example.com/",
+    url: "",
   },
 ];
