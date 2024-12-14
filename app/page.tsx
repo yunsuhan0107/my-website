@@ -1,7 +1,55 @@
 import Image from "next/image";
 import { socialLinks } from "./config";
 
+const hellos = [
+  "Hello",
+  "안녕하세요",
+  "こんにちは",
+  "Hallo",
+  "नमस्ते",
+  "Hola",
+  "Bonjour",
+  "Ciao",
+  "Olá",
+  "Здравствуйте",
+  "你好",
+  "Merhaba",
+  "Szia",
+  "Ahoj",
+  "Hej",
+  "Hei",
+  "Moi",
+  "Halo",
+  "Salam",
+  "Shalom",
+  "Sveiki",
+  "Labas",
+  "Sawubona",
+  "Salam Alaikum",
+  "Tere",
+  "Dobrý den",
+  "Yassou",
+  "Habari",
+  "Selamat pagi",
+  "Magandang araw",
+  "Hallo",
+  "Kamusta",
+  "God dag",
+  "Bula",
+  "Kia ora",
+  "Hae",
+  "Zdravo",
+  "Bok",
+  "Halló",
+  "Sveikas",
+  "Salve",
+  "Salut",
+  "Jambo",
+  "Selam",
+];
+
 export default function Page() {
+  const randomHello = hellos[Math.floor(Math.random() * hellos.length)];
   return (
     <section>
       <a href={socialLinks.github} target="_blank">
@@ -17,7 +65,7 @@ export default function Page() {
       </a>
 
       <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        Welcome.
+        {randomHello}.
       </h1>
 
       <div className="prose prose-neutral dark:prose-invert">
