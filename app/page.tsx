@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { socialLinks } from "./config";
 import {useState, useEffect } from "react";
