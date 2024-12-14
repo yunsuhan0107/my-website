@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { socialLinks } from "./config";
 import {useState, useEffect } from "react";
+import Typical from "react-typical";
 
 const hellos = [
   "Hello",
@@ -72,7 +73,11 @@ export default function Page() {
       </a>
 
       <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        {randomHello}.
+        <Typical
+          steps={[randomHello || "Welcome", 2000]} // Displays the greeting for 2 seconds
+          loop={1} // Plays the animation once
+          wrapper="span" // Wraps the text in a <span> element
+        />
       </h1>
 
       <div className="prose prose-neutral dark:prose-invert">
