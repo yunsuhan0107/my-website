@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { socialLinks } from "./config";
+import {useState, useEffect } from "react";
 
 const hellos = [
   "Hello",
@@ -49,7 +50,11 @@ const hellos = [
 ];
 
 export default function Page() {
-  const randomHello = hellos[Math.floor(Math.random() * hellos.length)];
+  const [randomHello, setRandomHello] = useState("");
+
+  useEffect(() => {
+    setRandomHello(hellos[Math.floor(Math.random() * hellos.length)]);
+  }, []);
   return (
     <section>
       <a href={socialLinks.github} target="_blank">
@@ -65,7 +70,7 @@ export default function Page() {
       </a>
 
       <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        {randomHello}.
+        {randomHello || "Welcome"}.
       </h1>
 
       <div className="prose prose-neutral dark:prose-invert">
