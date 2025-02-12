@@ -1,5 +1,5 @@
 export const metaData = {
-  baseUrl: "https://nextfolio-template.vercel.app/",
+  baseUrl: "https://yunsuhan.com",
   title: "Yunsu Han",
   name: "Yunsu Han",
   ogImage: "/opengraph-image.png",
@@ -8,7 +8,7 @@ export const metaData = {
 };
 
 export const socialLinks = {
-  github: "https://github.com/yunsuhan0107",
-  linkedin: "https://www.linkedin.com/in/yunsu-han-0642041a4",
+  github: "https://github.com/zeronohako",
+  linkedin: "",
   email: "mailto: yunsuhan00107@gmail.com",
 };
