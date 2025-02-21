@@ -14,7 +14,7 @@ export const projects: Project[] = [
     url: "https://docs.google.com/document/d/1-w4rcG7msn8TzT2jdoI4S8_pfglgfBkPopTKYTUxhxg/edit?usp=sharing"
   },
   {
-    title: "Drowning Detection Program Using CNN",
+    title: "Comparison of Drowning People Detection Systems for Water Safety",
     year: 2019,
     description:
       "A software-focused project of a system that differentiates images of a person drowning and swimming for maritime safety.",
