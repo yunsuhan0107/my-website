@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { socialLinks } from "./config";
-import { useState, useEffect } from "react";
+import {useState, useEffect } from "react";
 import Typical from "react-typical";
 
 const hellos = [
@@ -53,14 +53,11 @@ const hellos = [
 
 export default function Page() {
   const [randomHello, setRandomHello] = useState<{ text: string; language: string } | null>(null);
-  const [typedDone, setTypedDone] = useState(false);
 
   useEffect(() => {
-    const random = hellos[Math.floor(Math.random() * hellos.length)];
-    setRandomHello(random);
-    setTypedDone(false); // reset typing state when greeting changes
-  }, []);
-
+  const random = hellos[Math.floor(Math.random() * hellos.length)];
+  setRandomHello(random);
+}, []);
   return (
     <section>
       <a href={socialLinks.github} target="_blank">
@@ -84,21 +81,14 @@ export default function Page() {
           />
         )}
       </h1>
-
+      
       {randomHello && randomHello.language !== "English" && (
         <p className="text-sm text-gray-500 mb-8">
-          {!typedDone ? (
-            <Typical
-              steps={[`It means "Hi" in `, 1000]}
-              loop={1}
-              wrapper="span"
-              onFinished={() => setTypedDone(true)}
-            />
-          ) : (
-            <>
-              It means "Hi" in <strong>{randomHello.language}</strong>.
-            </>
-          )}
+          <Typical
+            steps={[`It means "Hi" in ${randomHello.language}.`, 2000]}
+            loop={1}
+            wrapper="span"
+          />
         </p>
       )}
 
@@ -107,8 +97,8 @@ export default function Page() {
           Hi! I'm Yunsu Han, and I study Information Sciences at University of Illinois at Urbana-Champaign.
         </p>
         <p>
-          This website contains some blog posts of subjects that I'm interested in, such as Artificial Intelligence, 
-          web development, Linux distros, and{" "}
+         This website contains some blog posts of subjects that I'm interested in, such as Artificial Intelligence, 
+         web development, Linux distros, and {" "}
           <a
             target="_blank"
             href="/blog"
@@ -121,15 +111,16 @@ export default function Page() {
           The website also contains several projects that I have done so far, including current progress for ongoing projects at the moment.
         </p>
         <p>
-          Feel free to read through my posts and send me an{" "}
+          Feel free to read through my posts and send me an {" "}
           <a
             target="_blank"
             href="mailto: yunsuhan00107@gmail.com"
           >
-            email
-          </a>{" "}
-          if you have any questions or feedbacks.
+             email 
+          </a>
+          {" "}if you have any questions or feedbacks.
         </p>
+        
       </div>
     </section>
   );
