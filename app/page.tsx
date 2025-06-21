@@ -6,58 +6,58 @@ import {useState, useEffect } from "react";
 import Typical from "react-typical";
 
 const hellos = [
-  "Hello",
-  "안녕하세요",
-  "こんにちは",
-  "Hallo",
-  "नमस्ते",
-  "Hola",
-  "Bonjour",
-  "Ciao",
-  "Olá",
-  "Здравствуйте",
-  "你好",
-  "Merhaba",
-  "Szia",
-  "Ahoj",
-  "Hej",
-  "Hei",
-  "Moi",
-  "Halo",
-  "Salam",
-  "Shalom",
-  "Sveiki",
-  "Labas",
-  "Sawubona",
-  "Salam Alaikum",
-  "Tere",
-  "Dobrý den",
-  "Yassou",
-  "Habari",
-  "Selamat pagi",
-  "Magandang araw",
-  "Hallo",
-  "Kamusta",
-  "God dag",
-  "Bula",
-  "Kia ora",
-  "Hae",
-  "Zdravo",
-  "Bok",
-  "Halló",
-  "Sveikas",
-  "Salve",
-  "Salut",
-  "Jambo",
-  "Selam",
+  { text: "Hello", language: "English" },
+  { text: "안녕하세요", language: "Korean" },
+  { text: "こんにちは", language: "Japanese" },
+  { text: "Hallo", language: "German" },
+  { text: "नमस्ते", language: "Hindi" },
+  { text: "Hola", language: "Spanish" },
+  { text: "Bonjour", language: "French" },
+  { text: "Ciao", language: "Italian" },
+  { text: "Olá", language: "Portuguese" },
+  { text: "Здравствуйте", language: "Russian" },
+  { text: "你好", language: "Chinese" },
+  { text: "Merhaba", language: "Turkish" },
+  { text: "Szia", language: "Hungarian" },
+  { text: "Ahoj", language: "Czech" },
+  { text: "Hej", language: "Swedish" },
+  { text: "Hei", language: "Norwegian" },
+  { text: "Moi", language: "Finnish" },
+  { text: "Halo", language: "Indonesian" },
+  { text: "Salam", language: "Persian/Arabic" },
+  { text: "Shalom", language: "Hebrew" },
+  { text: "Sveiki", language: "Latvian" },
+  { text: "Labas", language: "Lithuanian" },
+  { text: "Sawubona", language: "Zulu" },
+  { text: "Salam Alaikum", language: "Arabic" },
+  { text: "Tere", language: "Estonian" },
+  { text: "Dobrý den", language: "Czech" },
+  { text: "Yassou", language: "Greek" },
+  { text: "Habari", language: "Swahili" },
+  { text: "Selamat pagi", language: "Malay" },
+  { text: "Magandang araw", language: "Filipino" },
+  { text: "Kamusta", language: "Tagalog" },
+  { text: "God dag", language: "Danish" },
+  { text: "Bula", language: "Fijian" },
+  { text: "Kia ora", language: "Māori" },
+  { text: "Hae", language: "Welsh" },
+  { text: "Zdravo", language: "Serbian" },
+  { text: "Bok", language: "Croatian" },
+  { text: "Halló", language: "Icelandic" },
+  { text: "Sveikas", language: "Lithuanian" },
+  { text: "Salve", language: "Latin" },
+  { text: "Salut", language: "Romanian" },
+  { text: "Jambo", language: "Swahili" },
+  { text: "Selam", language: "Amharic" },
 ];
 
 export default function Page() {
-  const [randomHello, setRandomHello] = useState("");
+  const [randomHello, setRandomHello] = useState<{ text: string; language: string } | null>(null);
 
   useEffect(() => {
-    setRandomHello(hellos[Math.floor(Math.random() * hellos.length)]);
-  }, []);
+  const random = hellos[Math.floor(Math.random() * hellos.length)];
+  setRandomHello(random);
+}, []);
   return (
     <section>
       <a href={socialLinks.github} target="_blank">
@@ -72,13 +72,21 @@ export default function Page() {
         />
       </a>
 
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        <Typical
-          steps={[randomHello, 2000]} // Displays the greeting for 2 seconds
-          loop={1} // Plays the animation once
-          wrapper="span" // Wraps the text in a <span> element
-        />
+      <h1 className="mb-2 text-2xl font-medium tracking-tight">
+        {randomHello && (
+          <Typical
+            steps={[randomHello.text, 2000]}
+            loop={1}
+            wrapper="span"
+          />
+        )}
       </h1>
+      
+      {randomHello  && randomHello.language !== "English" && (
+        <p className="text-sm text-gray-500 mb-8">
+          It means "Hi" in {randomHello.language}.
+        </p>
+      )}
 
       <div className="prose prose-neutral dark:prose-invert">
         <p>
