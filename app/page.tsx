@@ -82,9 +82,13 @@ export default function Page() {
         )}
       </h1>
       
-      {randomHello  && randomHello.language !== "English" && (
+      {randomHello && randomHello.language !== "English" && (
         <p className="text-sm text-gray-500 mb-8">
-          It means "Hi" in {randomHello.language}.
+          <Typical
+            steps={[`It means "Hi" in ${randomHello.language}.`, 2000]}
+            loop={1}
+            wrapper="span"
+          />
         </p>
       )}
 
