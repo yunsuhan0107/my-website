@@ -100,7 +100,6 @@ export default function Page() {
          This website contains some blog posts of subjects that I'm interested in, such as Artificial Intelligence, 
          web development, Linux distros, and {" "}
           <a
-            target="_blank"
             href="/blog"
           >
             more
