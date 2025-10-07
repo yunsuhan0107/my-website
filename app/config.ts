@@ -10,5 +10,5 @@ export const metaData = {
 export const socialLinks = {
   github: "https://github.com/zeronohako",
   linkedin: "",
-  email: "mailto: yunsuhan00107@gmail.com",
+  email: "mailto: yunsuh2@illinois.edu",
 };
