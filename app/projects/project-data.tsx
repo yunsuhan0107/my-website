@@ -7,7 +7,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "UIUC Engineering Open House: Smart Trash Can with Automatic Classification System",
+    title: "Smart Trash Can with Automatic Classification System (Engineering Open House 2022)",
     year: 2022,
     description:
         "Using ESP-32 Camera and Arduino board with ResNet50 Architecture, the trash can detects and classifies the trash's category and transfers it to the bin accordingly.",
