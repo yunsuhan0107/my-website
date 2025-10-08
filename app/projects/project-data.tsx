@@ -7,6 +7,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Bass Track Separation",
+    year: 2025,
+    description:
+        "Tiny, reproducible baseline + MWF pipeline for MUSDB18. Goal: verify DSP, scoring, and MWF quickly, then swap in FNN/BLSTM models and blending.",
+    url: "https://github.com/zeronohako/music-sep-clone"
+  },
+  {
     title: "Smart Trash Can with Automatic Classification System (Engineering Open House 2022)",
     year: 2022,
     description:
