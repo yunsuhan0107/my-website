@@ -94,7 +94,7 @@ export default function Page() {
 
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          Hi! I'm Yunsu Han, and I study Information Sciences at University of Illinois at Urbana-Champaign.
+          Hi! I'm Yunsu Han, and I study Information Sciences + Data Science and Statistics at University of Illinois at Urbana-Champaign.
         </p>
         <p>
          This website contains some blog posts of subjects that I'm interested in, such as Artificial Intelligence, 
