@@ -97,7 +97,7 @@ export default function Page() {
           Hi! I'm Yunsu Han, and I study Information Sciences + Data Science and Statistics at University of Illinois at Urbana-Champaign.
         </p>
         <p>
-         This website contains some blog posts of subjects that I'm interested in, such as Artificial Intelligence, 
+         This website contains some blog posts of subjects that I'm interested in, such as Computer Vision, 
          web development, Linux distros, and {" "}
           <a
             href="/blog"
